@@ -1,0 +1,10 @@
+server:
+  port: ${SERVER_PORT:8445}
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: mypass
+    key-store-type: PKCS12
+
+REDIRECT_URI: https://localhost:8445/index.html
+APP_ID: 252530208223259
+APP_SECRET: 0dd0bc8493868da66e284f1a21f134c5
