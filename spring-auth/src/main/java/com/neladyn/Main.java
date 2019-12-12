@@ -9,3 +9,5 @@ public class Main {
         SpringApplication.run(Main.class);
     }
 }
+
+//reference: https://medium.com/@konstantinnalum/spring-boot-facebook-login-authentication-using-oauth-9e242c4c039e

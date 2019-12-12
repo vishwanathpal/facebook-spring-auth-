@@ -48,7 +48,8 @@
                 if (res === true) {
                     $("#login").hide();
                     $("#logout").show();
-                    showUserInfo()
+                    //showUserInfo()
+                    window.location.href = "https://localhost:8445/success";
                 }
                 else {
                     $("#login").show();
@@ -60,8 +61,8 @@
             }
         });
     }
-
-    function showUserInfo() {
+    
+    /* function showUserInfo() {
         $.ajax({
             url: "/facebook/userinfo",
             success: function (res, status) {
@@ -69,7 +70,7 @@
                 $("#userinfo").html(JSON.stringify(res, null, 2));
             }
         })
-    }
+    } */
 
     $("#logout").click(function () {
         $.ajax({

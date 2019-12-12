@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpStatusCodeException;
@@ -45,6 +46,13 @@ public class FacebookController {
         this.APP_ID = APP_ID;
         this.APP_SECRET = APP_SECRET;
     }
+    
+ // admin view page after login
+    @GetMapping("/success")
+ 	public String success() {
+ 		//logger.info("admin");
+ 		return "success";
+ 	}
 
     @GetMapping("/facebook/login")
     public ResponseEntity<?> facebookLogin(@RequestParam("code") String code, @RequestParam("state") String state,
